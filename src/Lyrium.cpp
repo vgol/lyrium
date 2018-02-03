@@ -19,7 +19,7 @@ Lyrium::LyriumCounter::LyriumCounter(int current_gold, int stop_gold)
     lp = Lyrium::LyriumPotion();
 }
 
-void Lyrium::LyriumCounter::howManyIngredients()
+void Lyrium::LyriumCounter::showIngredientsQuantity()
 {
     int number_of_potions;
     number_of_potions = current_gold / lp.totalPrice();

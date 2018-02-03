@@ -40,7 +40,7 @@ public:
     LyriumCounter(int current_gold, int stop_gold);
     virtual ~LyriumCounter();
 
-    void howManyIngredients();
+    void showIngredientsQuantity();
     void showBalance();
 };
 
