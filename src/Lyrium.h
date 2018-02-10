@@ -29,19 +29,56 @@ public:
     int totalPrice();
 };
 
+
+struct Quantities
+{
+    int m_lyriumDust;
+    int m_distillationAgents;
+    int m_concentratorAgents;
+    int m_flasks;
+    int m_lyriumPotions;
+
+    Quantities();
+
+    virtual ~Quantities();
+};
+
+
+struct Balance
+{
+    int m_income;
+    int m_costPrice;
+    int m_profit;
+
+    Balance();
+
+    virtual ~Balance();
+};
+
+
 class LyriumCounter
 {
 private:
-    int current_gold;
-    int stop_gold;
+    int m_currentGold;
+    int m_stopGold;
+
     LyriumPotion lp;
 
+    Quantities qties;
+    Balance balance;
+
 public:
-    LyriumCounter(int current_gold, int stop_gold);
+    LyriumCounter();
+
     virtual ~LyriumCounter();
 
-    void showIngredientsQuantity();
-    void showBalance();
+    void setCurrentGold(int m_current_gold);
+
+    void setStopGold(int m_stop_gold);
+
+    Quantities getIngredientsQuantity();
+
+    Balance getBalance();
 };
 
 } // Lyrium namespace

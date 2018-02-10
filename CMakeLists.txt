@@ -4,4 +4,8 @@ project(lyrium)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(lyrium src/main.cpp src/Lyrium.cpp)
+include_directories(../Boost/include/boost-1_66)
+
+
+add_subdirectory(src)
+add_subdirectory(test)
